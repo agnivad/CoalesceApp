@@ -1,6 +1,6 @@
 # CoalesceApp
-Financial Data Fetcher
-The Financial Data Fetcher is a Python application that fetches financial data from multiple APIs, including Alpha Vantage, CryptoQuant, and Birdeye. It is designed to be modular, extensible, and easy to use.
+
+The CoalesceApp is a Python application that fetches financial data from multiple APIs, including Alpha Vantage, CryptoQuant, and Birdeye. It is designed to be modular, extensible, and easy to use.
 
 Features
 Multiple Data Sources: Fetch data from Alpha Vantage (stock data), CryptoQuant (crypto analytics), and Birdeye (DeFi data).
