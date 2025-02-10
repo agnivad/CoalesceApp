@@ -52,28 +52,33 @@ A Python application to fetch financial data from **Alpha Vantage** (stock data)
    venv\Scripts\activate
 
 3. **Install dependencies**:
+   ```bash
    pip install -r requirements.txt
 
 4. **Set up API keys**:
+    ```bash
     Create a .env file in the root directory:
     ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key
     CRYPTOQUANT_API_KEY=your_cryptoquant_api_key
     BIRDEYE_API_KEY=your_birdeye_api_key
 
 5. **Fetch data from all APIs**:
+    ```bash
     python src/main.py
 
 6. **Troubleshooting**:
     If you get ModuleNotFoundError, add the src/ directory to PYTHONPATH:
+    ```bash
     export PYTHONPATH=$(pwd)/src  # Linux/Mac
     set PYTHONPATH=%cd%\src      # Windows
 
 7. **You can update main.py to fetch different types of data by using various combinations of supported endpoints and parameters, Below are examples:**.
-alpha_vantage_params = {"from_currency": "BTC", "to_currency": "USD"}
-alpha_vantage_data = alpha_vantage_fetcher.fetch_data(
-    endpoint="CURRENCY_EXCHANGE_RATE",
-    params=alpha_vantage_params,
-)
+    ```bash
+    alpha_vantage_params = {"from_currency": "BTC", "to_currency": "USD"}
+    alpha_vantage_data = alpha_vantage_fetcher.fetch_data(
+        endpoint="CURRENCY_EXCHANGE_RATE",
+        params=alpha_vantage_params,
+    )
 
 Future Improvements
 Asynchronous Requests: Use asyncio and aiohttp for faster concurrent API calls.
