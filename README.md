@@ -7,11 +7,9 @@ A Python application to fetch financial data from **Alpha Vantage** (stock data)
 ## Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
-- [Setup](#setup)
-- [Running the Project](#running-the-project)
-- [Server Check](#server-check)
+- [Setup & Running the Project](#setup)
 - [Future Improvements](#future-improvements)
-- [License](#license)
+
 
 ---
 
@@ -80,11 +78,12 @@ A Python application to fetch financial data from **Alpha Vantage** (stock data)
         params=alpha_vantage_params,
     )
 
-Future Improvements
-Asynchronous Requests: Use asyncio and aiohttp for faster concurrent API calls.
-Rate Limiting: Implement rate limiting to respect API usage policies.
-Data Validation: Validate API responses with Pydantic or JSON Schema.
-Unit Tests: Add comprehensive tests for all fetchers and edge cases.
-Docker Support: Containerize the application for deployment.
-Monitoring: Add Prometheus/Grafana for API health monitoring.
+8. **Future Improvements**:
+    ```bash
+    Asynchronous Requests: Use asyncio and aiohttp for faster concurrent API calls.
+    Rate Limiting: Implement rate limiting to respect API usage policies.
+    Data Validation: Validate API responses with Pydantic or JSON Schema.
+    Unit Tests: Add comprehensive tests for all fetchers and edge cases.
+    Docker Support: Containerize the application for deployment.
+    Monitoring: Add Prometheus/Grafana for API health monitoring.
 
