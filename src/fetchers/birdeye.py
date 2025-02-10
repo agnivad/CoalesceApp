@@ -22,5 +22,3 @@ class BirdeyeFetcher(DataFetcher):
         headers.update({"X-API-KEY": self.api_key, "accept":BirdeyeFetcher.REPONSE_TYPE})
         url = f"{self.BASE_URL}/{endpoint}"
         return self._make_request(url, params=params, headers=headers)
-
-       

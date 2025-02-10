@@ -8,7 +8,7 @@ class CryptoQuantFetcher(DataFetcher):
     def fetch_data(
         self, 
         endpoint: str,
-        function: str = None, 
+        function_name: str = None, 
         params: Optional[Dict[str, Any]] = None,
         headers: Optional[Dict[str, Any]] = None
     ) -> Optional[Dict[str, Any]]:
@@ -17,10 +17,8 @@ class CryptoQuantFetcher(DataFetcher):
             params = {}
         
         headers = {'Authorization': 'Bearer ' + self.api_key}
-
-        if function:
-            url = f"{self.BASE_URL}/{endpoint}/{function}?"
-        else:
-            url = f"{self.BASE_URL}/{endpoint}"
+        url = f"{self.BASE_URL}/{endpoint}"
+        if function_name:
+            url = url+f"/{function_name}?"
         
         return self._make_request(url, params=params, headers=headers)

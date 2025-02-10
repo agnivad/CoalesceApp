@@ -2,8 +2,12 @@ from src.config.settings import settings
 from src.fetchers.alpha_vantage import AlphaVantageFetcher
 from src.fetchers.cryptoquant import CryptoQuantFetcher
 from src.fetchers.birdeye import BirdeyeFetcher
-import json
 
+import json
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
     # Initialize fetchers
@@ -20,8 +24,9 @@ if __name__ == "__main__":
         endpoint="DIGITAL_CURRENCY_DAILY", 
         params=alpha_vantage_params
     )
+    logger.info("Alpha Vantage Data: %s", json.dumps(alpha_vantage_data, indent=2))
 
-
+    
     crypto_quant_params = {
         "exchange": "binance", 
         "window":"day", 
@@ -30,11 +35,12 @@ if __name__ == "__main__":
     }
     crypto_quant_data = crypto_quant_fetcher.fetch_data(
         endpoint="btc/exchange-flows", 
-        function="reserve",
+        function_name="reserve",
         params=crypto_quant_params
     )
     
     
+
     birdeye_data_params = {
         "address": "So11111111111111111111111111111111111111112", 
         "check_liquidity":100
@@ -45,4 +51,6 @@ if __name__ == "__main__":
         params=birdeye_data_params,
         headers=birdeye_headers
     )
+    logger.info("Birdeye Data: %s", json.dumps(birdeye_data, indent=2))
+
     
