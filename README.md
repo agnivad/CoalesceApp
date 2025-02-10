@@ -1,6 +1,6 @@
 # COALESCE APP
 
-A Python application to fetch financial data from **Alpha Vantage** (stock data), **CryptoQuant** (crypto analytics), and **Birdeye** (DeFi data). Built with modularity and extensibility in mind.
+A Python application to fetch financial data from **Alpha Vantage** (market data), **CryptoQuant** (on chain data), and **Birdeye** (sentiment data). Built with modularity and extensibility in mind.
 
 ---
 
