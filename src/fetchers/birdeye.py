@@ -1,9 +1,5 @@
 from typing import Optional, Dict, Any
 from src.fetchers.base_fetcher import DataFetcher
-import logging
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 
 class BirdeyeFetcher(DataFetcher):
@@ -19,6 +15,7 @@ class BirdeyeFetcher(DataFetcher):
         """Fetch data from Birdeye API."""
         if params is None:
             params = {}
+            
         if headers is None:
             headers = {}
 
